@@ -1,41 +1,32 @@
-/* Home */
 .main .home-section {
-  height: 100vh;
   background-image: url("/assets/images/home-bg.png");
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 120px 1fr;
 }
-/* Home - Navbar */
-.main .home-section .navbar-main {
+/* Nav */
+.main .home-section .nav-main {
   margin: 0 100px;
   display: flex;
   align-items: center;
 }
-.main .home-section .navbar-main .logo-container {
+.main .home-section .nav-main .logo-container {
   flex: 1;
 }
-.main .home-section .navbar-main .menu-container {
+.main .home-section .nav-main .menu-container {
   display: flex;
   align-items: center;
 }
-.main .home-section .navbar-main .menu-container li span {
-  display: block;
-  width: 2px;
-  height: 50px;
-  background: var(--primary);
-}
-.main .home-section .navbar-main .menu-container li a {
+.main .home-section .nav-main .menu-container li a {
   font-size: 25px;
-  font-weight: 300;
   margin: 0 25px;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
-.main .home-section .navbar-main .menu-container li a::after {
+.main .home-section .nav-main .menu-container li a::after {
   content: "";
   display: block;
   width: 100%;
@@ -44,21 +35,24 @@
   transform: scale(0, 1);
   transition: transform 200ms ease-in;
 }
-.main .home-section .navbar-main .menu-container li a:hover::after {
+.main .home-section .nav-main .menu-container li a:hover::after {
   transform: scale(1, 1);
 }
-.main .home-section .navbar-main .menu-container li a:hover::after {
-  transform: scale(1, 1);
+.main .home-section .nav-main .menu-container li span {
+  display: block;
+  width: 2px;
+  height: 50px;
+  background: var(--primary);
 }
-.main .home-section .navbar-main .menu-container li:nth-child(5) a::after,
-.main .home-section .navbar-main .menu-container li:nth-child(6) a::after {
+.main .home-section .nav-main .menu-container li:nth-child(5) a::after,
+.main .home-section .nav-main .menu-container li:nth-child(6) a::after {
   all: unset;
 }
-.main .home-section .navbar-main .menu-container li:nth-child(5) a,
-.main .home-section .navbar-main .menu-container li:nth-child(6) a {
+.main .home-section .nav-main .menu-container li:nth-child(5) a,
+.main .home-section .nav-main .menu-container li:nth-child(6) a {
   margin-right: -10px;
 }
-/* Home - Hero */
+/* Hero */
 .main .home-section .hero-main {
   margin: 0 100px;
   display: grid;
@@ -73,9 +67,10 @@
 .main .home-section .hero-main .hero-text-container h1 {
   font-size: 80px;
   font-weight: 400;
-  margin: 0px;
+  margin: 0;
 }
 .main .home-section .hero-main .hero-text-container h1 span {
+  font-weight: 400;
   color: var(--primary);
 }
 .main .home-section .hero-main .hero-text-container p {
@@ -89,13 +84,35 @@
   background: var(--primary);
   border-radius: 5px;
   font-size: 27px;
+  font-weight: 400;
   border: none;
-  color: #000000;
+  color: #000;
   margin-top: 67px;
 }
 .main .home-section .hero-main .hero-image-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+  :root {
+    --primary: red;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  :root {
+    --primary: green;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  :root {
+    --primary: blue;
+  }
 }

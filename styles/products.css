@@ -1,10 +1,8 @@
-/* Products */
 .main .products-section {
-  height: 100vh;
   background-image: url("/assets/images/products-bg.png");
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 200px 1fr;
 }
@@ -16,10 +14,10 @@
   align-items: center;
 }
 .main .products-section h2 span {
+  font-weight: 500;
   margin-left: 10px;
   color: var(--primary);
 }
-/* Products - List */
 .main .products-section .products-list {
   display: grid;
   grid-template-columns: 1fr repeat(3, 260px) 1fr;
@@ -51,23 +49,28 @@
   grid-column: 4/5;
 }
 .main .products-section .products-list .product {
-  border: 0.5px solid var(--primary-hover);
+  border: 0.5px solid var(--primaryHover);
   position: relative;
   display: grid;
   grid-template-rows: 1fr auto;
+  cursor: pointer;
 }
-.main .products-section .products-list .product > .burger-container {
-  transition: all 200ms ease-in;
+.main .products-section .products-list .product .burger-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 200ms ease-in;
 }
-.main .products-section .products-list .product > .burger-container p {
+.main .products-section .products-list .product .burger-container p {
   font-size: 25px;
   font-weight: 300;
   margin: 0;
   margin-top: 10px;
+}
+.main .products-section .products-list .product .burger-container p span {
+  color: var(--primary);
+  font-weight: 300;
 }
 .main
   .products-section
@@ -77,23 +80,27 @@
   .image-container {
   margin-top: 20px;
 }
-.main .products-section .products-list .product > .burger-container p span {
-  color: var(--primary);
-}
 .main .products-section .products-list .product > .price-container {
   margin: 0 14px;
-  margin-bottom: 18px;
-  cursor: pointer;
-  transition: all 200ms ease-in;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
+  transition: all 200ms ease-in;
+}
+.main
+  .products-section
+  .products-list
+  .product
+  .price-container
+  .image-container {
+  cursor: pointer;
 }
 .main .products-section .products-list .product > .price-container p {
   font-size: 25px;
-  margin: 0;
+  font-weight: 400;
   color: var(--primary);
 }
+/* Hover */
 .main .products-section .products-list .product:hover > .burger-container,
 .main .products-section .products-list .product:hover > .price-container {
   opacity: 0;
@@ -101,15 +108,28 @@
 .main .products-section .products-list .product:hover .hover-details {
   transform: scale(1);
 }
+/* End */
 .main .products-section .products-list .product .hover-details {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 2;
-  transform: scale(0);
   transition: transform 200ms ease-in;
+  transform: scale(0);
+  z-index: 2;
   display: grid;
   grid-template-rows: 1fr auto;
+}
+.main
+  .products-section
+  .products-list
+  .product
+  .hover-details
+  .price-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .main
   .products-section
@@ -121,16 +141,17 @@
   font-size: 25px;
   font-weight: 300;
   margin: 0;
-  margin-top: 10px;
 }
 .main
   .products-section
   .products-list
   .product
   .hover-details
+  .price-container
   p:nth-child(1)
   span {
   color: var(--primary);
+  font-weight: 300px;
 }
 .main
   .products-section
@@ -139,21 +160,11 @@
   .hover-details
   .price-container
   p:nth-child(2) {
-  color: var(--primary);
-  font-size: 25px;
   margin: 0;
-  margin-top: 10px;
-}
-.main
-  .products-section
-  .products-list
-  .product
-  .hover-details
-  .price-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 14px;
+  font-size: 25px;
+  font-weight: 400;
+  color: var(--primary);
 }
 .main
   .products-section
@@ -162,8 +173,7 @@
   .hover-details
   .image-container {
   margin: 0 14px;
-  margin-bottom: 18px;
-  cursor: pointer;
+  margin-bottom: 20px;
   display: grid;
   justify-self: end;
 }
