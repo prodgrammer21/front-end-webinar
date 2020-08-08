@@ -95,24 +95,3 @@
   align-items: flex-end;
   margin-bottom: 80px;
 }
-
-/* Desktop */
-@media (max-width: 1200px) {
-  :root {
-    --primary: red;
-  }
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-  :root {
-    --primary: green;
-  }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-  :root {
-    --primary: blue;
-  }
-}
