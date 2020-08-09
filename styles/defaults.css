@@ -1,0 +1,34 @@
+/* Variables */
+:root {
+  --primary: #dac404;
+  --primaryHover: #dac50480;
+}
+
+/* Default */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  scroll-behavior: smooth;
+}
+* {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 300;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px calc(100vh - 120px) repeat(3, 1fr);
+}

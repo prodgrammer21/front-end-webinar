@@ -1,39 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@import "./defaults.css";
+@import "./navbar.css";
 @import "./home.css";
 @import "./products.css";
 @import "./contacts.css";
 @import "./footer.css";
-
-/* Variables */
-:root {
-  --primary: #dac404;
-  --primaryHover: #dac50480;
-}
-
-/* Default */
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-* {
-  font-family: "Roboto", sans-serif;
-  color: #fff;
-  font-weight: 300;
-}
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-
-.main {
-  height: 100vh;
-  background: #000;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 100vh) 1fr;
-}
